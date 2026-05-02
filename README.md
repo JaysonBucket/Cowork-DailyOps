@@ -14,7 +14,7 @@ A personal daily-operations system for account managers, consultants, solution a
 
 Current version: **1.6.0** — see [CHANGELOG.md](CHANGELOG.md).
 
----
+</br>
 
 ## What it solves
 
@@ -28,7 +28,7 @@ Current version: **1.6.0** — see [CHANGELOG.md](CHANGELOG.md).
 - **Work/personal separation** — dedicated filter, P-codes for personal tasks, separate weekend briefing for personal-only items (Sat/Sun 07:00)
 - **Security filter for captures** — the afternoon sync only processes DOPS mails from trusted senders. Foreign captures are moved to `_rejected/` and flagged
 
----
+</br>
 
 ## Day cycle
 
@@ -46,6 +46,7 @@ Current version: **1.6.0** — see [CHANGELOG.md](CHANGELOG.md).
 - `M-MMDD-XX` — meeting (XX = short tag derived from the meeting title)
 - `NEW` — ad-hoc task captured by mail
 
+
 **Example subjects:**
 
 ```
@@ -56,7 +57,7 @@ DOPS-NEW Follow-up order ACME GmbH             → ad-hoc task
 
 A mail rule (Outlook/Gmail/etc.) matches on `Subject contains DOPS-` and drops everything into a folder called `DOPS-Capture`. The afternoon sync works through it at 15:30 — status word in the first line, done.
 
----
+</br>
 
 ## Command cheatsheet
 
@@ -72,7 +73,7 @@ DOPS prefix as a namespace — does not collide with the built-in `daily-briefin
 
 Distinctive natural phrases work too: *"Daily-Ops briefing"*, *"Which tasks should I pull forward before my meeting on DD.MM. with X?"*, *"Stakeholders at customer Y?"*, *"Highlights since the last review"*.
 
----
+</br>
 
 ## Quick start
 
@@ -87,7 +88,7 @@ Distinctive natural phrases work too: *"Daily-Ops briefing"*, *"Which tasks shou
 
 Detailed walkthrough with migration notes and troubleshooting → [SETUP.md](SETUP.md).
 
----
+</br>
 
 ## What's in the ZIP
 
@@ -120,6 +121,8 @@ daily-ops-ext/
     └── Briefings/              # YYYY-MM-DD-morning.md & -afternoon.md, daily
 ```
 
+</br>
+
 ### What each file does
 
 **`SKILL.md`** — Cowork reads name, version, description, and trigger phrases from here. Only edit it if you want to change triggers or scope.
@@ -144,7 +147,7 @@ daily-ops-ext/
 
 > **Note on language:** the skill itself runs in German by default (briefings, mail copy, and Excel headers). The repository documentation (README, SETUP, CHANGELOG) is English. To localize the skill output, edit the `Sprache:` line at the bottom of each prompt in `scheduled-prompts/` and translate the Excel sheet headers.
 
----
+</br>
 
 ## Architecture — the six logics
 
@@ -163,7 +166,7 @@ The afternoon sync runs complementary in six steps: **step 0** security filter (
 
 The weekend briefing (Sat/Sun) is a stand-alone personal-only routine with a hard sanity check: it scans the finished mail before send for work trigger words ("workshop", "sync", "customer", internal domain) — any hit ⇒ drop the entry, recompose. Ground rule: *when in doubt, exclude*.
 
----
+</br>
 
 ## When NOT to use this skill
 
@@ -172,38 +175,25 @@ The weekend briefing (Sat/Sun) is a stand-alone personal-only routine with a har
 - **Pure calendar maintenance** (move, decline) → `calendar-management` / `schedule-meeting`
 - **Ad-hoc mail triage without customer context** → just use mail tools directly
 
----
-
-## Two variants
-
-There are two versions with the same functional state:
-
-- **`daily-ops-ext`** *(this one)* — generic, portable across industries and companies, MIT-licensed, public.
-- **`daily-ops-ms`** *(not public)* — internal variant with company-specific terminology, customer templates, and stakeholder schemas. Stays internal.
-
-Both are developed in parallel — version 1.6.0 here matches 1.6.0 in the internal variant.
-
----
+</br>
 
 ## Frontier note
 
 Cowork Custom Skills currently run as a **Frontier feature** in Cowork environments where custom-skill import is enabled. If you can't import the skill on your end, check with your admin whether the feature is turned on.
 
----
+</br>
 
 ## License
 
 MIT — see [LICENSE](LICENSE). Use it, fork it, carve out pieces, build your own variant.
 
----
+</br>
 
 ## Feedback
 
 I have been running this skill in production for a few weeks and keep evolving it whenever something shows up in the workflow. If you try it and notice anything — a logic missing, a category that does not catch, a briefing section that is awkward — feel free to open an [issue](../../issues) or get in touch via [jaysons.dev](https://jaysons.dev).
 
 Community work, no SLA, plenty of love. ✌️
-
----
 
 **Source:** [github.com/JaysonBucket/Cowork-DailyOps](../../) · **License:** MIT · **Web:** [jaysons.dev](https://jaysons.dev)
 
