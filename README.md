@@ -7,6 +7,11 @@
 
 A personal daily-operations system for account managers, consultants, solution architects, project leads, and customer success managers — anywhere lots of customers run in parallel and context is easy to lose.
 
+- To import, download according zip file
+- use **/skills** command and fire it up
+- in the dialogue, tell Coworkmthat you are uploading a new custom skill, it should import and do consistency check
+- afterwards, Cowork should guide you through schedule and basic data setup
+
 Current version: **1.6.0** — see [CHANGELOG.md](CHANGELOG.md).
 
 ---
