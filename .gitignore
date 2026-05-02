@@ -1,0 +1,27 @@
+# Excel temporaries
+~$*.xlsx
+*.xlsx#
+.~lock.*
+
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Personal data — never commit live captures
+data/Briefings/*.md
+data/Meeting-Notes/*.md
+!data/Briefings/.gitkeep
+!data/Meeting-Notes/.gitkeep
+
+# Test / dev / runtime artefacts
+_rejected/
+_processed/
+_review/
+_backup/
