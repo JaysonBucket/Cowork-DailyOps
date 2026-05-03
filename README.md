@@ -1,6 +1,6 @@
 [back home](https://github.com/JaysonBucket)  
 
-# DailyOps Custom Skill
+# DailyOps Custom Skill (beta)
 
 > **A Cowork Custom Skill for customer-facing roles.**
 > Tasks, customers, stakeholders, projects, hours, highlights — in one hub, with a daily morning briefing and an end-of-day sync.
