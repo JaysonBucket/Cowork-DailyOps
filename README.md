@@ -1,4 +1,5 @@
 [back home](https://github.com/JaysonBucket)  
+Content freshness: 04.05.2026 (v2.1 release)
 
 # daily-ops-ext v2.1 (beta)
 
