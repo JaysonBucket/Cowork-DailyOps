@@ -204,17 +204,6 @@ The weekend briefing (Sat/Sun) is a stand-alone personal-only routine with a har
 
 ---
 
-## Two variants
-
-There are two versions with the same functional state:
-
-- **`daily-ops-ext`** *(this one)* — generic, portable across industries and companies, MIT-licensed, public.
-- **`daily-ops-ms`** *(not public)* — internal variant with company-specific terminology, customer templates, and stakeholder schemas. Stays internal.
-
-Both are developed in parallel — version 2.1.0 here matches 2.1.0 in the internal variant.
-
----
-
 ## Frontier note
 
 Cowork Custom Skills currently run as a **Frontier feature** in Cowork environments where custom-skill import is enabled. If you can't import the skill on your end, check with your admin whether the feature is turned on.
