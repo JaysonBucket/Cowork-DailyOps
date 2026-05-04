@@ -10,7 +10,26 @@ A personal daily-operations system for account managers, consultants, solution a
 
 Current version: **2.1.0** — see [CHANGELOG.md](CHANGELOG.md). **2.1.0 is additive on top of 2.0.0** — adds personal goals tracking and Outlook-category intake. No data migration needed; just replace the three weekday scheduled prompts and create a few new Outlook categories. See [SETUP.md](SETUP.md) for details. (If upgrading from 1.7.x or earlier, read the 2.0.0 migration section first — that one was a breaking xlsx → JSON migration.)
 
----
+</br>
+
+## What you get: A Cowork skill that runs your day on rails
+
+- 07:00 morning briefing — Top 3 for today, today's meetings with capture codes, watchlist hits, lead-time reminders, vacation alerts, goal adherence (Soll/Ist).
+- 10:00 / 12:00 / 14:00 capture drains — fold quick updates from the day into your task list; silent unless something needs review.
+- 15:30 afternoon sync — closes the loop: tasks updated, meeting notes archived, new stakeholders folded in, OneDrive mirror, daily snapshot, end-of-day proposal for tomorrow.
+- Sat/Sun weekend briefing — personal-only, with strict filtering against work content.
+
+How you feed it: 
+- any Outlook mail with DOPS- in the subject. 
+- Codes (T-MMDD-NN for tasks, M-MMDD-XX for meetings, P- for personal, NEW for ad-hoc) are pre-baked into mailto links in the briefing — one click, type a status word, send. 
+- Or just tag a mail/event with the DOPS-Intake category and it gets picked up automatically.
+
+What it tracks: customers, stakeholders (with first-contact + chronicle), projects, partners, watchlist, vacation balance with carryover-deadline alerts, and active goals (cadence, time-budget, streak, or anti-goals like a meeting limit).
+
+Storage: plain JSON under the skill folder, mirrored daily to OneDrive with versioned snapshots.
+Net effect: capture-by-mail in seconds during the day, structured state at the end of the day, no double-entry.
+
+</br>
 
 ## What it solves
 
